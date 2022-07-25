@@ -181,9 +181,8 @@ function getHead(arr, n) {
  *    [ 1, 3, 4, 5 ], 2  => [ 4, 5 ]
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
-function getTail(/* arr, n */) {
-  throw new Error('Not implemented');
-  // return arr.slice(n - 1);
+function getTail(arr, n) {
+  return arr.slice(-n);
 }
 
 /**
@@ -457,8 +456,8 @@ function getIdentityMatrix(/* n */) {
  *     0, 100 => [ 0, 1, 2, ..., 100 ]
  *     3, 3   => [ 3 ]
  */
-function getIntervalArray(/* start, end */) {
-  throw new Error('Not implemented');
+function getIntervalArray(start, end) {
+  return Array(end - start).fill(start).reduce((acc) => [...acc, acc[acc.length - 1] + 1], [start]);
 }
 
 /**
