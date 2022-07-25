@@ -262,7 +262,6 @@ function encodeToRot13(str) {
       const newIndex = rot13Index - currentAlphabet.length;
       return currentAlphabet[newIndex];
     }
-    console.log(currentAlphabet[rot13Index]);
     return currentAlphabet[rot13Index];
   };
 
